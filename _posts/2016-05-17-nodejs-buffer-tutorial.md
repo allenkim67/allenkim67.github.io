@@ -219,7 +219,7 @@ content into another buffer. For example:
 {% highlight javascript %}
 const Buffer = require('buffer').Buffer;
 
-// create an empty buffer with length of 4 bytes.
+// create an empty buffer with length of 11 bytes.
 const buf = Buffer.alloc(11);
 
 // create two buffers, one that contains 'hello ', the other 'world'.
