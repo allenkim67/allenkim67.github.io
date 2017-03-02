@@ -29,7 +29,7 @@ which is basically just boiling the potato before baking or pan frying. Much
 faster and more consistent results.
 
 Or cooking meat. I understand now that you can enhance the meat's flavor when
-you sear the it, which means cooking the outside of the meat on high heat so
+you sear it, which means cooking the outside of the meat on high heat so
 that it turns brown.
 
 There are other things you can consider other than just the cooking method. Like

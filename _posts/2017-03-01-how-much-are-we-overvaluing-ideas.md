@@ -12,5 +12,5 @@ themselves are worthless.
 The thing that's most interesting to me is how easy it is to make this mistake
 even when you know you're not supposed to do it. I think this tells us something
 interesting about the degree to which are intuitions mislead us. We're not just
-overvaluing our idea, we're wildly overvaluing our ideas. We're not just
-undervaluing validating our ideas, we're wilding undervaluing it.
+overvaluing our ideas, we're massively overvaluing our ideas. We're not just
+undervaluing validating our ideas, we're massively undervaluing it.
