@@ -25,6 +25,56 @@ undervaluing validating our ideas, we’re wilding undervaluing it.&lt;/p&gt;
 			</item>
 		
 			<item>
+				<title>Adding SSL To Express For Free</title>
+				<description>&lt;p&gt;I show you how to setup free SSL verification with &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let’s Encrypt&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;set-up-the-server&quot;&gt;Set up the server&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const fs = require('fs');
+const https = require('https');
+const express = require('express');
+
+const options = {
+  key: fs.readFileSync('/etc/letsencrypt/live/example.com/privkey.pem'),
+  cert: fs.readFileSync('/etc/letsencrypt/live/example.com/fullchain.pem')
+};
+
+const app = express();
+
+const server = https
+  .createServer(options, app)
+  .listen(443, () =&amp;gt; console.log(&quot;listening on port 443&quot;));
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Note that you are using the &lt;code class=&quot;highlighter-rouge&quot;&gt;https&lt;/code&gt; module, not &lt;code class=&quot;highlighter-rouge&quot;&gt;http&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The main difference is that &lt;code class=&quot;highlighter-rouge&quot;&gt;https.createServer&lt;/code&gt; takes the paths to your
+certificates as its first argument.&lt;/p&gt;
+
+&lt;p&gt;Note https uses port 443 by convention instead of port 80 for http.&lt;/p&gt;
+
+&lt;p&gt;Finally, since the current code only handles https requests you’ll probably want
+something to handle http requests as well. &lt;a href=&quot;http://stackoverflow.com/questions/24015292/express-4-x-redirect-http-to-https&quot;&gt;Here is an example that redirects all http requests to https.&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;generating-the-certificates&quot;&gt;Generating the certificates&lt;/h3&gt;
+&lt;p&gt;First you want to download &lt;a href=&quot;https://certbot.eff.org/&quot;&gt;certbot&lt;/a&gt; which is &lt;a href=&quot;https://letsencrypt.org/docs/client-options/&quot;&gt;recommended by Let’s Encrypt&lt;/a&gt;.
+If you’re on mac you can just &lt;code class=&quot;highlighter-rouge&quot;&gt;brew install certbot&lt;/code&gt;. Otherwise go to the site
+and follow the directions.&lt;/p&gt;
+
+&lt;p&gt;Then run this in the terminal replacing your email and site domain:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;certbot certonly --standalone --email admin@example.com -d example.com&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;That should create your certificates at /etc/letsencrypt/live/example.com/ by
+default. If you want to tweak the certbot options you can check out their &lt;a href=&quot;https://certbot.eff.org/docs/using.html&quot;&gt;documenation&lt;/a&gt;.&lt;/p&gt;
+</description>
+				<pubDate>Wed, 01 Mar 2017 00:00:00 +0700</pubDate>
+				<link>/programming/2017/03/01/adding-ssl-to-express-for-free.html</link>
+				<guid isPermaLink="true">/programming/2017/03/01/adding-ssl-to-express-for-free.html</guid>
+			</item>
+		
+			<item>
 				<title>How To Get Better At Cooking As A Beginner</title>
 				<description>&lt;p&gt;I’ve started to get the hang of a couple recipes. Here a few things that I’ve
 realized.&lt;/p&gt;
