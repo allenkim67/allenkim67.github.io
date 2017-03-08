@@ -5,7 +5,7 @@ categories: programming
 tags: [ssl, node, express]
 ---
 
-I show you how to setup free SSL verification with [Let's Encrypt](https://letsencrypt.org/).
+Here, I'll show you how to setup free SSL verification with [Let's Encrypt](https://letsencrypt.org/).
 
 ### Set up the server
 
@@ -14,6 +14,7 @@ const fs = require('fs');
 const https = require('https');
 const express = require('express');
 
+// we'll generate these files in the next step
 const options = {
   key: fs.readFileSync('/etc/letsencrypt/live/example.com/privkey.pem'),
   cert: fs.readFileSync('/etc/letsencrypt/live/example.com/fullchain.pem')
@@ -45,5 +46,5 @@ Then run this in the terminal replacing your email and site domain:
 
 `certbot certonly --standalone --email admin@example.com -d example.com`
 
-That should create your certificates at /etc/letsencrypt/live/example.com/ by
+That should create your certificates at `/etc/letsencrypt/live/example.com/` by
 default. If you want to tweak the certbot options you can check out their [documenation](https://certbot.eff.org/docs/using.html).
