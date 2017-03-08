@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "How to make your own bittorrent client"
-date:   2016-05-04
 categories: programming
 tags: [bittorrent]
 ---
