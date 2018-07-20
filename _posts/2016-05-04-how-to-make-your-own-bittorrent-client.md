@@ -15,7 +15,7 @@ Table of Contents
     1. [Bencode](#bencode)
 3. [Getting peers via the tracker](#getting-peers-via-the-tracker)
     1. [Http vs udp vs tcp](#http-vs-udp-vs-tcp)
-    2. [Sending message with UDP](#sending-messages-with-UDP)
+    2. [Sending messages with UDP](#sending-messages-with-UDP)
     3. [UDP tracker protocol and message format](#udp-tracker-protocol-and-message-format)
         1. [Connect messaging](#connect-messaging)
         2. [Announce messaging](#announce-messaging)
@@ -374,7 +374,7 @@ follows:
 `socket.send` but lets me avoid having to set the offset and length arguments
 since I know I want to send the whole buffer, and sets a default callback which
 is just an empty function, since I mostly don't need to do anything after
-sending the message (see point 5 in the [previous section](#sending-message-with-UDP)
+sending the message (see point 5 in the [previous section](#sending-messages-with-UDP)
 if you need a refresher on `socket.send`)
 
 2. `respType` will check if the response was for the connect or the announce
