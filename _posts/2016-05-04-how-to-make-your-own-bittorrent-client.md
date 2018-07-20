@@ -94,7 +94,7 @@ You can get an idea of how this all works in the image below (credit to
 ### 1.3 Links and references
 These are links that I referenced many times during this project:
 
-[wiki.theory.org/BitTorrentSpecification](https://wiki.theory.org/BitTorrentSpecification) -
+[wiki.theory.org/index.php/BitTorrentSpecification](https://wiki.theory.org/index.php/BitTorrentSpecification) -
 This is an unofficial bittorrent specification but basically has everything you
 need to know. Detailed and very readable.
 
@@ -140,7 +140,7 @@ run this code you'll realize that `readFileSync` returns a [buffer](https://node
 , *not* a string. Later on you'll see that all our network messages are sent
 and received in the form of buffers, so it's important that you have a good
 understanding of how they work. If you're not familiar with buffers in node.js
-I've written a mini guide on buffers [here](/2016/05/17/nodejs-buffer-tutorial.html). The short story is that buffers
+I've written a mini guide on buffers [here](/programming/2016/05/17/nodejs-buffer-tutorial.html). The short story is that buffers
 represent a sequence of raw bytes. If you want to read the buffer as a string
 you have to specify an encoding scheme (you can see I used utf-8 above).
 
@@ -157,7 +157,7 @@ That output probably looked fairly incomprehensible to you, and that's because
 you've probably never heard of bencode. Bencode is data serialization format,
 and I don't think I've seen it used anywhere outside of torrent files. But you
 may be familiar with JSON or XML, and bencode is essentially the same idea, it
-just uses a slightly [different format](https://wiki.theory.org/BitTorrentSpecification#Bencoding).
+just uses a slightly [different format](https://wiki.theory.org/index.php/BitTorrentSpecification#Bencoding).
 
 Here's the same data again in JSON:
 `'{"announce":"udp://tracker.coppersurfer.tk:6969/announce","created by":"uTorrent/1870","creation date":1462355939,"encoding":"UTF-8","info":{"length":124234,"name":"puppy.jpg","piece length":16384,"pieces":"T�k�/�_(�S\\u0011h%���+]q\'B\\u0018�٠:����p\\"�j����1-g\\"\\u0018�s(\\u001b\\u000f���V��=�h�m\\u0017a�nF�2���N\\r�ǩ�_�\\u001e\\"2���\'�wO���-;\\u0004ע\\u0017�ؑ��L&����0\\u001f�D_9��\\t\\\\��O�h,n\\u001a5g�(��仑,�\\\\߰�%��U��\\u0019��C\\u0007>��df��"}}'`
@@ -1045,7 +1045,7 @@ follow the following protocol.
 
 ### 4.4 Message types
 
-According to the [spec](https://wiki.theory.org/BitTorrentSpecification#Handshake)
+According to the [spec](https://wiki.theory.org/index.php/BitTorrentSpecification#Handshake)
 the handshake message should be a buffer that looks like this:
 
     handshake: <pstrlen><pstr><reserved><info_hash><peer_id>
@@ -1844,7 +1844,7 @@ section.
 #### 4.10.2 Pieces vs. blocks
 The function `message.buildRequest` in the above code needs to take an object
 with an index, begin, and a length property. These are the required fields for
-the payload of a [request message](https://wiki.theory.org/BitTorrentSpecification#request:_.3Clen.3D0013.3E.3Cid.3D6.3E.3Cindex.3E.3Cbegin.3E.3Clength.3E).
+the payload of a [request message](https://wiki.theory.org/index.php/BitTorrentSpecification#request:_.3Clen.3D0013.3E.3Cid.3D6.3E.3Cindex.3E.3Cbegin.3E.3Clength.3E).
 But what are these fields for exactly? Well index is easy, it's the piece index
 that is currently being passed in. What about begin and length?
 
