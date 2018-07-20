@@ -68,7 +68,7 @@ The first commit will just be a bare package.json, .gitignore file, and a
 sample torrent file for you to work with. I’ll also mark points throughout this
 guide with links to commits.
 
-<a name="overview of bittorrent"></a>
+<a name="overview-of-bittorrent"></a>
 
 ### 1.2 Overview of bittorrent
 The bittorrent protocol has to two main parts.
@@ -273,7 +273,7 @@ is still rarely used.
 
 4. In order to send a message through a socket, it must be in the form of a
 buffer, not a string or number. `Buffer.from` is an easy way to create a buffer
-from a string, see my [mini guide](/2016/05/17/nodejs-buffer-tutorial.html) for more info on buffers.
+from a string, see my [mini guide](/programming/2016/05/17/nodejs-buffer-tutorial.html) for more info on buffers.
 
 5. The socket's `send` method is used for sending messages. The first argument is
 the message as a buffer. The next two arguments let you send just part of the
