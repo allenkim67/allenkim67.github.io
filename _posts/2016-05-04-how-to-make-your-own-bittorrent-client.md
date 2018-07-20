@@ -932,7 +932,7 @@ Also note I'm using the method exported by download.js.
 
 [github commit #8: restructure and add download.js](https://github.com/allenkim67/allen-torrent/tree/41c7cf8d94985d0d23c55e5cf6792a1a6b5c795a)
 
-<a name="tcp-connect-to-peers></a>
+<a name="tcp-connect-to-peers"></a>
 
 ### 4.2 TCP connect to peers
 
